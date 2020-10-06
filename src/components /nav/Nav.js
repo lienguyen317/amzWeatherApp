@@ -1,14 +1,24 @@
 import React from 'react';
 import './nav.css';
+import * as ReactBootStrap from 'react-bootstrap';
+import hot from './hot.svg'
 
 function Nav() {
   return (
     <div ClassName='Nav'>
-        <nav>
-            <h1>Home</h1>
-            <h1>Weather</h1>
-            <h1>About</h1>
-        </nav> 
+        {/* react-bootstrap navbar */}
+        <ReactBootStrap.Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+          <ReactBootStrap.Navbar.Brand href="#home">MY WEATHER APP <img src={hot} alt='logo' style={{width:'35px'}}/></ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+            <ReactBootStrap.Nav className="ml-auto">
+              {/* add ```&nbsp;<frontawesom>``` */}
+              <ReactBootStrap.Nav.Link href="#features">Home&nbsp;<i class="fas fa-home"></i></ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link href="#pricing">Weather&nbsp;<i class="fas fa-umbrella"></i></ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link href="#pricing">About&nbsp;<i class="fas fa-address-card"></i></ReactBootStrap.Nav.Link>
+            </ReactBootStrap.Nav>
+          </ReactBootStrap.Navbar.Collapse>
+        </ReactBootStrap.Navbar>
     </div>
     
   );
