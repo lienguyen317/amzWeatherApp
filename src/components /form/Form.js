@@ -1,13 +1,13 @@
 import React from 'react';
 import './form.css'
 
-function Form() {
+function Form(props) {
   return (
-    <div className="Form">
+    <div className="Form" onSubmit={props.loadWeather}>
       <form>
-        <input className='city' type="text" name="city" value='City'/>
-        <input className='country' type="text" name="country" value='Country'/>
-        <input className='button' type="submit" value="Submit" />
+        <input className='city' type="text" name="city" placeholder='City'/>
+        <input className='country' type="text" name="country" placeholder='Country'/>
+        <input className='button' type="submit" value="Get Weather" />
       </form>
     </div>
   );
