@@ -1,7 +1,8 @@
 import React from 'react';
 import './nav.css';
 import * as ReactBootStrap from 'react-bootstrap';
-import hot from './hot.svg'
+import hot from './hot.svg';
+// import {Link} from 'react-router-dom';
 
 function Nav() {
   return (
@@ -13,9 +14,9 @@ function Nav() {
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <ReactBootStrap.Nav className="ml-auto">
               {/* add ```&nbsp;<frontawesom>``` */}
-              <ReactBootStrap.Nav.Link href="#features">Home&nbsp;<i class="fas fa-home"></i></ReactBootStrap.Nav.Link>
-              <ReactBootStrap.Nav.Link href="#pricing">Weather&nbsp;<i class="fas fa-umbrella"></i></ReactBootStrap.Nav.Link>
-              <ReactBootStrap.Nav.Link href="#pricing">About&nbsp;<i class="fas fa-address-card"></i></ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link href="/">Home&nbsp;<i class="fas fa-home"></i></ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link href="/weather">Weather&nbsp;<i class="fas fa-umbrella"></i></ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link href="about">About&nbsp;<i class="fas fa-address-card"></i></ReactBootStrap.Nav.Link>
             </ReactBootStrap.Nav>
           </ReactBootStrap.Navbar.Collapse>
         </ReactBootStrap.Navbar>
