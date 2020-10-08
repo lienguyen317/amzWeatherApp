@@ -8,10 +8,9 @@ import { Alert } from 'react-bootstrap';
 function Weather() {
   const apiKey = '77c638c4087dc16d2d6ba94671248266';
   
-  const [form, setForm] = useState ({
-    city:''
-  });
+  const [form, setForm] = useState ({city:''});
   const [weather, setWeather] = useState([])
+  const [forecast, setForecast] =useState([])
 
   // async function weatherData(e){
   //   e.preventDefault();
@@ -34,12 +33,18 @@ function Weather() {
     if (form.city === ''){
       Alert('Add City!!!')
     }else{
-       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${apiKey}`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${form.city}&units=imperial&appid=${apiKey}`)
         .then((response)=>response.json())
         .then((data)=>{
-          console.log(data)
+          console.log('current', data)
           setWeather({data: data})
-        })   
+        })  
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${form.city}&units=imperial&appid=${apiKey}`) 
+        .then((response)=>response.json())
+        .then((data)=>{
+          console.log('forecast', data)
+          setForecast({data:data})
+        })
     }
   }
 
@@ -69,7 +74,13 @@ function Weather() {
           </div>
         :null
       }
-      <Forecast />
+      {
+        weather.data !== undefined ?
+          <div>
+            <Forecast data = {forecast.data}/>
+          </div>
+        :null
+      }  
     </div>
     )
 }
