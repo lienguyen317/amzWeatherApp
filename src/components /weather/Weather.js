@@ -28,7 +28,7 @@ function Weather() {
   //     )}
   //   } 
 
-  async function weatherData(e){
+  function weatherData(e){
     e.preventDefault();
     if (form.city === ''){
       Alert('Add City!!!')
