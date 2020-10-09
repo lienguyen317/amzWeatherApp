@@ -12,7 +12,7 @@ function Weather() {
   const [weather, setWeather] = useState([])
   const [forecast, setForecast] =useState([])
 
-  function weatherData(e){
+  async function weatherData(e){
     e.preventDefault();
     if (form.city === ''){
       Alert('Add City!!!')
@@ -45,7 +45,7 @@ function Weather() {
     <div className='Weather'>
       <form>
         <input className='city' type="text" name="city" placeholder='City' style={{textAlign: 'center'}}  onChange={e => handleChange(e)}/> 
-        <input className='button' type="submit" value="Get Weather" onClick={e => weatherData(e)}/>
+        <input className='button' type="submit" value="Get Weather" style={{fontWeight: 'bold'}} onClick={e => weatherData(e)}/>
       </form>
       {
         weather.data !== undefined ?

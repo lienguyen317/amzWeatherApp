@@ -1,4 +1,12 @@
-.forecastSets {
+.cardSets {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
 }
+.card{
+    opacity: .5;
+    text-align: left;
+    padding:20px;
+}
+
+
