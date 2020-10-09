@@ -1,0 +1,12 @@
+.city {
+    opacity: .4;
+    border: none;
+    border-bottom: 4px solid black ;
+}
+.button {
+    background-color: rgb(198,114,112);
+    color: white;  
+}
+.button:hover{
+    background-color: black;
+}

@@ -1,22 +1,41 @@
 import React from 'react';
 import './forecast.css'
-import * as ReactBootStrap from 'react-bootstrap';
+
+
 
 function Forecast(props) {
-  console.log('propshit', props)
+  console.log('props', props)
   return (
     <div className="Forecast">
-      <ReactBootStrap.Card style={{ width: '18rem' }}>
-        <ReactBootStrap.Card.Body>
-          <ReactBootStrap.Card.Title>{props.data.city.name}</ReactBootStrap.Card.Title> 
-          <ReactBootStrap.Card.Subtitle>{props.data.list[0].dt_txt}</ReactBootStrap.Card.Subtitle>
-          <ReactBootStrap.Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-          </ReactBootStrap.Card.Text>
-        </ReactBootStrap.Card.Body>
-      </ReactBootStrap.Card>
-
+      <h1>Hourly forecast</h1>
+      <div className='forecastSets'>
+        <div clasName='card'>
+        <p>Date & Time:</p>
+        <p>Min-temp: </p>
+        <p>Max-temp: </p>
+        </div>
+        <div clasName='card'>
+        <p>Date & Time:</p>
+        <p>Min-temp: </p>
+        <p>Max-temp: </p>
+        </div>
+        <div clasName='card'>
+        <p>Date & Time:</p>
+        <p>Min-temp: </p>
+        <p>Max-temp: </p>
+        </div>
+        <div clasName='card'>
+        <p>Date & Time:</p>
+        <p>Min-temp: </p>
+        <p>Max-temp: </p>
+        </div>
+        <div clasName='card'>
+        <p>Date & Time:</p>
+        <p>Min-temp: </p>
+        <p>Max-temp: </p>
+      </div>
+      </div>
+      
     </div>
   );
 }

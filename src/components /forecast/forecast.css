@@ -1,0 +1,16 @@
+h1 {
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+}
+
+.forecastSets {
+    display: flex;
+
+}
+
+.card {
+    border: 1px solid #ccc;
+    flex: 1;
+    padding:10px;
+    text-align: center;
+   }
