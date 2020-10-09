@@ -7,10 +7,13 @@ import { Alert } from 'react-bootstrap';
 
 function Weather() {
   const apiKey = '06348c556be92fe47bf4349fa0391126';
+// https://api.openweathermap.org/data/2.5/forecast?q=${form.city}&cnt=5&units=imperial&appid=${apiKey} - old daily forecast api
+
+  const apiKeyTwo ='0dd212aaf23b43cea8e1ec1bdaac6b1d'
   
   const [form, setForm] = useState ({city:''});
   const [weather, setWeather] = useState([])
-  const [forecast, setForecast] =useState([])
+  const [forecast, setForecast] =useState({})
 
   async function weatherData(e){
     e.preventDefault();
@@ -23,11 +26,11 @@ function Weather() {
           console.log('current', data)
           setWeather({data: data})
         })  
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${form.city}&cnt=5&units=imperial&appid=${apiKey}`) 
+      fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${form.city}&units=I&days=5&key=${apiKeyTwo}`) 
         .then((response)=>response.json())
         .then((data)=>{
-          console.log('forecast', data.list)
-          setForecast({data:data.list})
+          console.log('forecast', data.data)
+          setForecast({data: data.data})
         })
     }
   }
@@ -55,7 +58,7 @@ function Weather() {
         :null
       }
       {
-        weather.data !== undefined ?
+        forecast.data !== undefined ?
           <div>
             <Forecast data = {forecast.data}/>
           </div>
