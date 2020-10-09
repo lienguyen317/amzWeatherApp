@@ -39,7 +39,7 @@ function Weather() {
           console.log('current', data)
           setWeather({data: data})
         })  
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${form.city}&units=imperial&appid=${apiKey}`) 
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${form.city}&cnt=5&units=imperial&appid=${apiKey}`) 
         .then((response)=>response.json())
         .then((data)=>{
           console.log('forecast', data)
@@ -63,8 +63,7 @@ function Weather() {
     return (
     <div className='Weather'>
       <form>
-        <input className='city' type="text" name="city" placeholder='City' onChange={e => handleChange(e)}/>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input className='city' type="text" name="city" placeholder='City' onChange={e => handleChange(e)}/> 
         <input className='button' type="submit" value="Get Weather" onClick={e => weatherData(e)}/>
       </form>
       {
@@ -77,7 +76,7 @@ function Weather() {
       {
         weather.data !== undefined ?
           <div>
-            <Forecast data = {forecast.data}/>
+            <Forecast data= {forecast}/>
           </div>
         :null
       }  
