@@ -9,8 +9,8 @@ function Forecast(props) {
       <ReactBootStrap.Card style={{ width: '18rem' }}>
         <ReactBootStrap.Card.Body>
 
-          <ReactBootStrap.Card.Title>{props.city.name}</ReactBootStrap.Card.Title> 
-  <ReactBootStrap.Card.Subtitle className="mb-2 text-muted">{props.list.dt_text}</ReactBootStrap.Card.Subtitle>
+          <ReactBootStrap.Card.Title></ReactBootStrap.Card.Title> 
+    <ReactBootStrap.Card.Subtitle></ReactBootStrap.Card.Subtitle>
            <ReactBootStrap.Card.Text>
             Some quick example text to build on the card title and make up the bulk of
             the card's content.

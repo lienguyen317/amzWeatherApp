@@ -76,7 +76,7 @@ function Weather() {
       {
         weather.data !== undefined ?
           <div>
-            <Forecast data= {forecast}/>
+            <Forecast data = {forecast.data}/>
           </div>
         :null
       }  
