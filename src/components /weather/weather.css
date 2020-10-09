@@ -1,12 +1,17 @@
 .city {
+    width: 300px;
     opacity: .4;
     border: none;
     border-bottom: 4px solid black ;
 }
 .button {
+    width: 150px;
     background-color: rgb(198,114,112);
     color: white;  
 }
 .button:hover{
     background-color: black;
+}
+form{
+    margin-top: 40px;
 }

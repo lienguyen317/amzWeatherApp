@@ -1,4 +1,8 @@
-h1 {
-    color: white;
-    text-shadow: 4px 4px 8px #000000;
+.icon {
+    width:120px;
+    height:120px;
+}
+
+.currentWeather{
+    margin-top: 40px;
 }

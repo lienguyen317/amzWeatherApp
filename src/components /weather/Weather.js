@@ -44,7 +44,7 @@ function Weather() {
     return (
     <div className='Weather'>
       <form>
-        <input className='city' type="text" name="city" placeholder='City' onChange={e => handleChange(e)}/> 
+        <input className='city' type="text" name="city" placeholder='City' style={{textAlign: 'center'}}  onChange={e => handleChange(e)}/> 
         <input className='button' type="submit" value="Get Weather" onClick={e => weatherData(e)}/>
       </form>
       {

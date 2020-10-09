@@ -8,12 +8,30 @@ body {
   background-image: url('https://images.unsplash.com/photo-1566996694954-90b052c413c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  color: white;
+  text-shadow: 4px 4px 8px #000000;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .currentWeather{
+    margin-top: 80px;
+  }
+  .Forecast{
+    display: none;
+  }
+}
+
+
 
 
 

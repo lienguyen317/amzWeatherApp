@@ -1,16 +1,4 @@
-h1 {
-    color: white;
-    text-shadow: 4px 4px 8px #000000;
-}
-
 .forecastSets {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
-.card {
-    border: 1px solid #ccc;
-    flex: 1;
-    padding:10px;
-    text-align: center;
-   }
